@@ -1,2 +1,8 @@
 .next
 node_modules
+
+#IDE configuration
+.idea
+
+# ASDF local configuration
+.tool-versions
