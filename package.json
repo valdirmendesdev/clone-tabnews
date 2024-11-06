@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run services:up && npm run services:wait:database && npm run migrations:up && next dev",
+    "dev": "npm run services:up && npm run services:wait:database && npm run migrations:up && cross-env-shell \"next dev || exit 0\"",
+    "postdev": "npm run services:stop",
     "test": "npm run services:up && concurrently -n next,jest --hide next -k -s command-jest \"next dev\" \"jest --runInBand --verbose\"",
     "test:watch": "jest --runInBand --watchAll",
     "posttest": "npm run services:stop",
@@ -39,6 +40,7 @@
     "@swc/core": "^1.9.0",
     "commitizen": "4.3.1",
     "concurrently": "9.1.0",
+    "cross-env-shell": "^7.0.3",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "9.14.0",
     "eslint-config-next": "15.0.2",
