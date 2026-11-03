@@ -1,6 +1,7 @@
-/* eslint-disable camelcase,no-unused-vars */
-exports.shorthands = undefined;
+/*eslint no-unused-vars: ["error", { "argsIgnorePattern": "^_" }]*/
+exports.shortands = undefined;
 
-exports.up = (pgm) => {};
 
-exports.down = (pgm) => {};
+exports.up = (_pgm) => {};
+
+exports.down = (_pgm) => {};
